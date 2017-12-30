@@ -9,10 +9,21 @@ This is an example of a one card busy beaver:
 ```
 1
 1
-0
+0 
 1
 0
 0
+````
+that means
+```
+# If registry is zero
+1 # What to write one or zero
+1 # Move left for 1 move right for 0
+0 # Number of next card, an int 
+# If registry is one
+1 # What to write one or zero
+0 # Move right for 1 move left for 0
+0 # Number of next card, an int
 ````
 
 This means that if the registry value is 0 write a 1 to the left and then move to card zero (halt). If the registry value is 0 write a 1 to the right and then move to card zero.
