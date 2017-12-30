@@ -97,5 +97,4 @@ class Machine:
 turing = Machine()
 run = True
 while run:
-#    print (turing.card)
     run = turing.evolve()
