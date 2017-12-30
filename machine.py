@@ -16,7 +16,7 @@ class Register:
         else:
             return p + str(self.positive[self.pos])
 
-    def  read(self):
+    def read(self):
         if self.pos == 0:
             return self.zero
         elif self.pos < 0:
@@ -51,12 +51,15 @@ class Card:
         with open("cards/" + str(self.number) ,'r') as f:
             for row in f:
                 line.append(row[:-1])
-        self.zero_write = bool(line[0])
-        self.zero_move = bool(line[1])
+        self.zero_write = bool(int(line[0]))
+        self.zero_move = bool(int(line[1]))
         self.zero_next = int(line[2])
-        self.one_write = bool(line[3])
-        self.one_move = bool(line[4])
+        self.one_write = bool(int(line[3]))
+        self.one_move = bool(int(line[4]))
         self.one_next = int(line[5])
+    def __str__(self):
+        return "Card number: " + str(self.number) + "\nIf 1 :\nMove: " + str(self.one_move) + "\nWrite: " + str(self.one_write) + "\nNext card: " + str(self.one_next) + "\nIf 0 :\nMove: " + str(self.zero_move) + "\nWrite: " + str(self.zero_write) + "\nNext card: " + str(self.zero_next) + '\n'
+
 
 class Machine:
     def __init__(self):
@@ -93,4 +96,5 @@ class Machine:
 turing = Machine()
 run = True
 while run:
-   run = turing.evolve()
+#    print (turing.card)
+    run = turing.evolve()
