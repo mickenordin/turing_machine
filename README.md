@@ -30,7 +30,7 @@ This means that if the registry value is 0 write a 1 to the left and then move t
 
 That is to say that the first three rows correspond to a registry of zero and the last three rows correspond to a registry of one.
 
-A card that will move to the left if it is zero and the right if it is one and tehn exit, but leave everything else in place looks like this:
+A card that will move to the left if it is zero and the right if it is one and then exit, but leave everything else in place looks like this:
 ```
 0
 1
