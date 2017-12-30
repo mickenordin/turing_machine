@@ -69,27 +69,28 @@ class Machine:
     def evolve(self):
         ret = True
         if self.r.read():
+            self.r.write(self.card.one_write)
+            print(self.r)
             if self.card.one_move:
                 self.r.left()
             else:
                 self.r.right()
-            self.r.write(self.card.one_write)
             if not self.card.one_next:
                 ret = False
             else:
                 self.card = Card(self.card.one_next)
         else:
+            self.r.write(self.card.zero_write)
+            print(self.r)
             if self.card.zero_move:
                 self.r.left()
             else:
                 self.r.right()
-            self.r.write(self.card.zero_write)
             if not self.card.zero_next:
                 ret = False
             else:
                 self.card = Card(self.card.zero_next)
 
-        print(self.r)
         return ret
 
 
