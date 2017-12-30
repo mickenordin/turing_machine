@@ -39,3 +39,30 @@ A card that will move to the left if it is zero and the right if it is one and t
 0
 0
 ```
+
+## Compiler/decompiler
+To make it easier to code there is a compiler and a decompiler awailable, if you have cards that you want to convert to a .tm-file you can use the decompiler:
+```
+./decompiler.py adder.tm cards/
+```
+
+If you have a .tm-file that you want to convert to cards, you can similarly use the compiler:
+```
+./compiler.py adder.tm adder
+```
+This will give you a stack of cards for the adder.tm program in the adder director, which will be created for you
+
+The .tm file can have comments starting with a #-sign and empty lines with only whitespace in them
+
+Otherwise the format of a .tm-file is this:
+```
+cardnumber:write_zero,move_zero,next_zero,write_one,move_one,next_one
+```
+
+For instance, the one card busy beaver would look like this:
+```
+# This is a comment, blank lines ar ok too, like the next line
+
+1:1,1,0,1,0,0
+````
+
