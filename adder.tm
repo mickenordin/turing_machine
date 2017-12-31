@@ -57,7 +57,10 @@
 35:1,1,36,0,0,304
 36:1,1,37,0,0,305
 37:1,1,38,0,0,306
-38:1,1,307,0,0,307
+38:1,1,39,0,0,307
+
+# If we get this far we have overflow and should end the program
+39:1,0,0,0,0,0
 
 # Here we need to go back to reg pos 0 after the decrementer is done
 300:0,0,41,0,0,41
@@ -72,7 +75,7 @@
 # Here we need to increment the positive registry
 # increment: if 0 write 1: end
 #            if 1 write 0 move to next
-41:1,1,400,0,0,42
+41:1,1,50,0,0,42
 42:1,1,401,0,0,43
 43:1,1,402,0,0,44
 44:1,1,403,0,0,45
@@ -82,8 +85,7 @@
 48:1,1,407,0,0,407
 
 # Here we need to go back to pos 0 after the incrementer is done
-400:0,0,0,0,0,0
-401:0,1,400,1,1,400
+401:0,1,50,1,1,50
 402:0,1,401,1,1,401
 403:0,1,402,1,1,402
 404:0,1,403,1,1,403
@@ -91,5 +93,8 @@
 406:0,1,405,1,1,405
 407:0,1,406,1,1,406
 408:0,1,407,1,1,407
+
+# Here we jump back to the decrementer
+50:0,1,30,0,1,30
 
 
