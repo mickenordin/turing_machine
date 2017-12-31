@@ -1,5 +1,5 @@
 # turing_machine
-A simulation of a Turing machine with a two-way register and a card reader
+A simulation of a Turing machine (https://en.wikipedia.org/wiki/Turing_machine) with a two-way register and a card reader
 
 ## Operation of the turing machine
 First the machine will read card one for instructions. The machine will start at registry position zero, it will read the value there (which will be zero) and write the value from the card to that registry entry, then it will move the write head in the indicated direction. After the instruction on the card has been executed it will move to the indicated next card. If that card is the zeroeth card, the machine will halt.
@@ -41,7 +41,7 @@ A card that will move to the left if it is zero and the right if it is one and t
 ```
 
 ## Compiler/decompiler
-To make it easier to code there is a compiler and a decompiler awailable, if you have cards that you want to convert to a .tm-file you can use the decompiler:
+To make it easier to code there is a compiler and a decompiler available, if you have cards that you want to convert to a .tm-file you can use the decompiler:
 ```
 ./decompiler.py adder.tm cards/
 ```
