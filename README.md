@@ -66,4 +66,4 @@ For instance, the one card busy beaver would look like this:
 1:1,1,0,1,0,0
 ````
 ## The adder program
-The adder program on the cards in the repository will add two binary numbers in registry position -1 to -7 and 1 to 7 and place the result in registry position 1 to 8. It does this by decrementing the number in -1 to -7 by one and incrementing the number in 1 to 7 untill the number in the negative part of the registry is zero. The hard code values for the two numbers is 8 and 4 but can be changed to any 7 bit number.
+The adder program on the cards in the repository will add two binary numbers in registry position -1 to -7 and 1 to 7 and place the result in registry position 1 to 8. It does this by decrementing the number in -1 to -7 by one and incrementing the number in 1 to 7 untill the number in the negative part of the registry is zero. The hard code values for the two numbers is 8 and 3 but can be changed to any 7 bit number.
